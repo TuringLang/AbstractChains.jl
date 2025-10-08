@@ -2,7 +2,7 @@ using Documenter
 using AbstractChains
 
 makedocs(;
-    sitename = "AbstractChainsj.jl",
+    sitename = "AbstractChains.jl",
     modules = [AbstractChains],
     pages = ["index.md"],
     checkdocs = :exports,
