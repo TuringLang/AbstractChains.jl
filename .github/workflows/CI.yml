@@ -33,6 +33,9 @@ jobs:
           # macOS
           - version: '1'
             os: macos-latest
+          # 1.11
+          - version: '1.11'
+            os: ubuntu-latest
           # Minimum supported version
           - version: 'min'
             os: ubuntu-latest
