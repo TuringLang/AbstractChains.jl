@@ -12,6 +12,21 @@ matrices of values.
 Note that, despite its name, an `AbstractChain` can store multiple chains (e.g. when
 sampling in parallel, or when combining chains from multiple runs). The main reason why this
 needs to be a singular form is because the package name is already AbstractChains (plural).
+
+## Interface
+
+To implement a new subtype of `AbstractChain`, you need to define the following methods:
+
+- `Base.size` should return a tuple of ints (the exact meaning is left to you)
+- `Base.keys` should return a list of keys
+- [`AbstractChains.get_data`](@ref)`(chn, key)`
+- [`AbstractChains.iter_indices`](@ref)`(chn)`
+- [`AbstractChains.chain_indices`](@ref)`(chn)`
+
+You can optionally define the following methods for efficiency:
+
+- [`AbstractChains.niters`](@ref)`(chn)`
+- [`AbstractChains.nchains`](@ref)`(chn)`
 """
 abstract type AbstractChain end
 
