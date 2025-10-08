@@ -1,0 +1,10 @@
+name = "AbstractChains"
+uuid = "cf21eebc-0ab9-480b-bcfe-fa15a3ac9d25"
+authors = ["Penelope Yong <penelopeysm@gmail.com>"]
+version = "0.1.0"
+
+[extensions]
+AbstractChainsTestExt = ["Test"]
+
+[weakdeps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
