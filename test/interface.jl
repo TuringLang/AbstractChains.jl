@@ -10,7 +10,7 @@ using Test
 struct MockChain <: AbstractChain
     iter_indices::Vector{Int}
     chain_indices::Vector{Int}
-    data::Dict{Symbol, Matrix{Float64}}
+    data::Dict{Symbol,Matrix{Float64}}
 end
 const MOCK = MockChain(1:10, 1:3, Dict(:param1 => rand(10, 3), :param2 => rand(10, 3)))
 AbstractChains.iter_indices(c::MockChain) = c.iter_indices
